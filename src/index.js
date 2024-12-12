@@ -1,3 +1,11 @@
 import './styles/index.scss';
+import { header } from './js/header';
+import { createRootTree } from './js/root';
+import { main } from './js/main';
+import footer from './js/footer';
 
-console.log('Hello world');
+createRootTree([
+  header(),
+  main(),
+  footer(),
+]);

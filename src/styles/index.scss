@@ -1,3 +1,4 @@
-body {
-  font-family: sans-serif;
-}
+@use 'common';
+@use 'root';
+@use 'main';
+@use 'footer';

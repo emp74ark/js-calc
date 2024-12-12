@@ -1,0 +1,36 @@
+@use "colors" as c;
+
+@mixin app-button {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 0.2rem;
+  border: none;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    box-shadow: 0.1rem 0.1rem 0.1rem c.$bg-shadow;
+  }
+}
+
+.button__number,
+.button__delimiter {
+  @include app-button;
+  background: c.$bg-primary;
+}
+
+.button__action {
+  @include app-button;
+  background: c.$bg-tertiary;
+}
+
+.buttons-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 0.3rem;
+}

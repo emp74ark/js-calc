@@ -1,0 +1,15 @@
+footer {
+  & > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    gap: 0.5rem;
+    line-height: 1rem;
+    text-decoration: none;
+  }
+}
+
+.cc__image {
+  width: 1rem;
+}
