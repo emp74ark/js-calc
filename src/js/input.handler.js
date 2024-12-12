@@ -12,5 +12,4 @@ export function inputHandler(e) {
     console.log(`Symbol ${ inputValue } not allowed`); // TODO: add error to the layout
     e.target.value = inputValue.replace(notAllowedSymbols, '');
   }
-
 }

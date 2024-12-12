@@ -154,7 +154,7 @@ export function main() {
   buttonsContainer.classList.add('buttons-container');
 
   cButtons.forEach(({ title, type, fn }) => {
-    const buttonElement = cButton(title, type, fn);
+    const buttonElement = cButton(title, type, fn, cInput);
     buttonsContainer.appendChild(buttonElement);
   });
 
