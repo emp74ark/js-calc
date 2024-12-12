@@ -1,4 +1,6 @@
 import { cButton } from './button';
+import { calculate, toOpposite } from './actions';
+import { inputHandler } from './input.handler';
 
 export function main() {
   const mainElement = document.createElement('main');
@@ -7,7 +9,7 @@ export function main() {
 
   const cInput = document.createElement('input');
 
-  cInput.type = 'number';
+  cInput.addEventListener('input', (e) => inputHandler(e))
 
   fragment.appendChild(cInput);
 
@@ -16,133 +18,133 @@ export function main() {
       title: 'AC',
       type: 'action',
       fn: () => {
-        console.log(cInput.value);
+        cInput.value = '';
       },
     },
     {
-      title: '+-',
+      title: '+/-',
       type: 'action',
       fn: () => {
-        console.log(cInput.value);
+         cInput.value = toOpposite(cInput.value)
       },
     },
     {
       title: '%',
       type: 'action',
       fn: () => {
-        console.log(cInput.value);
+        cInput.value += '%';
       },
     },
     {
       title: '/',
       type: 'action',
       fn: () => {
-        console.log(cInput.value);
+        cInput.value += '/';
       },
     },
     {
       title: '*',
       type: 'action',
       fn: () => {
-        console.log(cInput.value);
+        cInput.value += '*';
       },
     },
     {
       title: '-',
       type: 'action',
       fn: () => {
-        console.log(cInput.value);
+        cInput.value += '-';
       },
     },
     {
-      title: '-',
+      title: '+',
       type: 'action',
       fn: () => {
-        console.log(cInput.value);
+        cInput.value += '+';
+      },
+    },
+    {
+      title: '=',
+      type: 'action',
+      fn: () => {
+        cInput.value = calculate(cInput.value)
       },
     },
     {
       title: ',',
       type: 'delimiter',
       fn: () => {
-        console.log(cInput.value);
+        cInput.value += ',';
       },
     },
     {
       title: '0',
       type: 'number',
       fn: () => {
-        console.log(cInput.value);
+        cInput.value += '0';
       },
     },
     {
       title: '1',
       type: 'number',
       fn: () => {
-        console.log(cInput.value);
-      },
-    },
-    {
-      title: '1',
-      type: 'number',
-      fn: () => {
-        console.log(cInput.value);
+        cInput.value += '1';
       },
     },
     {
       title: '2',
       type: 'number',
       fn: () => {
-        console.log(cInput.value);
+        cInput.value += '2';
       },
     },
     {
       title: '3',
       type: 'number',
       fn: () => {
-        console.log(cInput.value);
+        cInput.value += '3';
       },
     },
     {
       title: '4',
       type: 'number',
       fn: () => {
-        console.log(cInput.value);
+        cInput.value += '4';
       },
     },
     {
       title: '5',
       type: 'number',
       fn: () => {
-        console.log(cInput.value);
+        cInput.value += '5';
       },
     },
     {
       title: '6',
       type: 'number',
       fn: () => {
-        console.log(cInput.value);
+        cInput.value += '6';
       },
     },
     {
       title: '7',
       type: 'number',
       fn: () => {
-        console.log(cInput.value);
+        cInput.value += '7';
       },
     },
     {
       title: '8',
       type: 'number',
       fn: () => {
-        console.log(cInput.value);
+        cInput.value += '8';
       },
     },
     {
       title: '9',
       type: 'number',
       fn: () => {
-        console.log(cInput.value);
+        cInput.value += '9';
       },
     },
   ];
