@@ -4,6 +4,7 @@ export const notAllowedSymbols = /[^0-9+\-=*%/]+/g;
 export const messages = {
   defaultError: 'Something went wrong',
   invalidExpression: 'Invalid expression',
+  invalidSymbol: 'This symbol is not allowed',
 };
 
 export const messageLevel = {

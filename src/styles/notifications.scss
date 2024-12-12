@@ -16,11 +16,12 @@
   position: absolute;
   right: 1rem;
   top: 1rem;
-  width: 10rem;
+  width: 40vw;
   border-radius: 0.3rem;
   padding: 0.5rem 1rem;
+  text-align: center;
   box-shadow: c.$bg-shadow;
-  animation: notification-animation 0.3s ease-in-out;
+  animation: notification-animation 0.1s ease-in-out;
 }
 
 .notification_info {

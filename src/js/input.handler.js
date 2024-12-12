@@ -1,4 +1,10 @@
-import { allowedSymbols, notAllowedSymbols } from './constants';
+import {
+  allowedSymbols,
+  messageLevel,
+  messages,
+  notAllowedSymbols,
+} from './constants';
+import { notify } from './notifications';
 
 export function inputHandler(e) {
   const inputValue = e.target.value;
@@ -10,6 +16,7 @@ export function inputHandler(e) {
 
   if (!allowedSymbols.test(inputValue)) {
     console.log(`Symbol ${ inputValue } not allowed`); // TODO: add error to the layout
+    notify(messages.invalidSymbol, messageLevel.warning);
     e.target.value = inputValue.replace(notAllowedSymbols, '');
   }
 }

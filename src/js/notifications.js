@@ -9,5 +9,5 @@ export function notify(message, type) {
 
   setTimeout(() => {
     notificationElement.remove();
-  }, 3000);
+  }, 1500);
 }
