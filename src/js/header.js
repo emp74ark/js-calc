@@ -1,3 +1,5 @@
+import { theme } from './theme';
+
 export function header() {
   const headerElement = document.createElement('header');
 
@@ -20,9 +22,11 @@ export function header() {
   `;
 
   headerLogo.innerHTML = svg;
+  const themeToggle = theme();
 
   fragment.appendChild(headerLogo);
   fragment.appendChild(header__title);
+  fragment.appendChild(themeToggle);
 
   headerElement.appendChild(fragment);
   return headerElement;

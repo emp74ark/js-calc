@@ -9,6 +9,11 @@
   color-scheme: light dark;
   color: c.$text-light;
   background-color: c.$bg-dark;
+
+  &:has(.light) {
+    color: c.$text-dark;
+    background-color: c.$bg-light;
+  }
 }
 
 body {
@@ -21,11 +26,4 @@ body {
   grid-template-rows: 1fr auto 1fr;
   place-items: center center;
   gap: 1rem;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: c.$text-dark;
-    background-color: c.$bg-light;
-  }
 }

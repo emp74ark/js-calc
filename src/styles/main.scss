@@ -1,7 +1,12 @@
+@use 'colors' as c;
+
 main {
-  width: 12rem;
+  width: 16rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
   align-items: center;
+  padding: 2rem 1rem;
+  border: 1px solid c.$border-dark;
+  border-radius: 0.5rem;
 }
