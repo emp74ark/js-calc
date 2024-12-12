@@ -19,7 +19,8 @@
 }
 
 .button__number,
-.button__delimiter {
+.button__delimiter,
+.button__null {
   @include app-button;
   background: c.$bg-primary;
 }
@@ -33,4 +34,9 @@
   display: grid;
   grid-template-columns: repeat(4, auto);
   gap: 0.3rem;
+}
+
+.button__null {
+  width: 6.6rem;
+  grid-column: 1/3;
 }

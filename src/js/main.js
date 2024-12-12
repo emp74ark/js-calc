@@ -43,66 +43,31 @@ export function main() {
       },
     },
     {
-      title: '*',
+      title: '7',
+      type: 'number',
+      fn: () => {
+        cInput.value += '7';
+      },
+    },
+    {
+      title: '8',
+      type: 'number',
+      fn: () => {
+        cInput.value += '8';
+      },
+    },
+    {
+      title: '9',
+      type: 'number',
+      fn: () => {
+        cInput.value += '9';
+      },
+    },
+    {
+      title: 'x',
       type: 'action',
       fn: () => {
         cInput.value += '*';
-      },
-    },
-    {
-      title: '-',
-      type: 'action',
-      fn: () => {
-        cInput.value += '-';
-      },
-    },
-    {
-      title: '+',
-      type: 'action',
-      fn: () => {
-        cInput.value += '+';
-      },
-    },
-    {
-      title: '=',
-      type: 'action',
-      fn: () => {
-        cInput.value = calculate(cInput.value)
-      },
-    },
-    {
-      title: ',',
-      type: 'delimiter',
-      fn: () => {
-        cInput.value += ',';
-      },
-    },
-    {
-      title: '0',
-      type: 'number',
-      fn: () => {
-        cInput.value += '0';
-      },
-    },
-    {
-      title: '1',
-      type: 'number',
-      fn: () => {
-        cInput.value += '1';
-      },
-    },
-    {
-      title: '2',
-      type: 'number',
-      fn: () => {
-        cInput.value += '2';
-      },
-    },
-    {
-      title: '3',
-      type: 'number',
-      fn: () => {
-        cInput.value += '3';
       },
     },
     {
@@ -127,24 +92,59 @@ export function main() {
       },
     },
     {
-      title: '7',
-      type: 'number',
+      title: '-',
+      type: 'action',
       fn: () => {
-        cInput.value += '7';
+        cInput.value += '-';
       },
     },
     {
-      title: '8',
+      title: '1',
       type: 'number',
       fn: () => {
-        cInput.value += '8';
+        cInput.value += '1';
       },
     },
     {
-      title: '9',
+      title: '2',
       type: 'number',
       fn: () => {
-        cInput.value += '9';
+        cInput.value += '2';
+      },
+    },
+    {
+      title: '3',
+      type: 'number',
+      fn: () => {
+        cInput.value += '3';
+      },
+    },
+    {
+      title: '+',
+      type: 'action',
+      fn: () => {
+        cInput.value += '+';
+      },
+    },
+    {
+      title: '0',
+      type: 'null',
+      fn: () => {
+        cInput.value += '0';
+      },
+    },
+    {
+      title: ',',
+      type: 'delimiter',
+      fn: () => {
+        cInput.value += ',';
+      },
+    },
+    {
+      title: '=',
+      type: 'action',
+      fn: () => {
+        cInput.value = calculate(cInput.value)
       },
     },
   ];
