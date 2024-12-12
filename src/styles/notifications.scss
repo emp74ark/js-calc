@@ -1,0 +1,45 @@
+@use "colors" as c;
+
+@keyframes notification-animation {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@mixin notifications {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 10rem;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  box-shadow: c.$bg-shadow;
+  animation: notification-animation 0.3s ease-in-out;
+}
+
+.notification_info {
+  @include notifications;
+  background: c.$bg-info;
+}
+
+.notification_success {
+  @include notifications;
+  background: c.$bg-success;
+}
+
+.notification_warning {
+  @include notifications;
+  background: c.$bg-warning;
+}
+
+.notification_error {
+  @include notifications;
+  background: c.$bg-danger;
+}
+

@@ -1,5 +1,5 @@
 export function getRootElement() {
-  return  document.getElementById('root');
+  return document.getElementById('root');
 }
 
 export function createRootTree(elements) {

@@ -1,5 +1,10 @@
 @use "colors" as c;
 
 header {
-  border: 1px solid c.$border-light;
+  display: flex;
+  gap: 1rem;
+}
+
+.header__logo {
+  width: 2rem;
 }
