@@ -6,4 +6,8 @@ input {
   padding: 0.5rem 1rem;
   font-size: 2rem;
   text-align: right;
+
+  &:focus {
+    outline: none;
+  }
 }

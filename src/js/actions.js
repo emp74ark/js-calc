@@ -1,6 +1,6 @@
 export function calculate(values) {
   try {
-    const result = new Function(`return ${values}`)();
+    const result = new Function(`return ${ values }`)();
     if (isNaN(result) || !isFinite(result)) {
       return 0;
     }
@@ -11,9 +11,9 @@ export function calculate(values) {
 }
 
 export function toOpposite(values) {
-  const elements = values.split(/[+\-*%//]/)
+  const elements = values.split(/[+\-*%//]/);
   if (values.length !== elements.length) {
-    return `-(${values})`;
+    return `-(${ values })`;
   }
   return values * -1;
 }

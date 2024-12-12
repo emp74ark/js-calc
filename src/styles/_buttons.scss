@@ -25,7 +25,8 @@
   background: c.$bg-primary;
 }
 
-.button__action {
+.button__action,
+.button__calculate {
   @include app-button;
   background: c.$bg-tertiary;
 }

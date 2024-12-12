@@ -142,7 +142,7 @@ export function main() {
     },
     {
       title: '=',
-      type: 'action',
+      type: 'calculate',
       fn: () => {
         cInput.value = calculate(cInput.value)
       },

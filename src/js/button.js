@@ -4,7 +4,7 @@ export function cButton(title, type, onClick, inputRef) {
   buttonElement.className = `button__${ type }`;
   buttonElement.addEventListener('click', () => {
     onClick();
-    inputRef?.focus();
+    type !== 'calculate' && inputRef?.focus();
   });
   return buttonElement;
 }
