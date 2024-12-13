@@ -10,9 +10,19 @@
   color: c.$text-light;
   background-color: c.$bg-dark;
 
+  & a,
+  & a:visited {
+    color: c.$text-light;
+  }
+
   &:has(.light) {
     color: c.$text-dark;
     background-color: c.$bg-light;
+
+    & a,
+    & a:visited {
+      color: c.$text-dark;
+    }
   }
 }
 
