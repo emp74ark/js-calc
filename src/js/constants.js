@@ -1,10 +1,12 @@
 export const allowedSymbols = /^[0-9+\-=*%/,.]*$/;
 export const notAllowedSymbols = /[^0-9+\-=*%/]+/g;
+export const repeatedZeros = /^0{2,}/
 
 export const messages = {
   defaultError: 'Something went wrong',
   invalidExpression: 'Invalid expression',
   invalidSymbol: 'This symbol is not allowed',
+  repeatedZeros: 'Repeated zeros in start of expression.',
 };
 
 export const messageLevel = {
