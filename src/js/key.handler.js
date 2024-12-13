@@ -1,5 +1,6 @@
 import { getRootElement } from './root';
 import { calculate } from './actions';
+import { inputHandler } from './input.handler';
 
 export function keyHandler() {
   const root = getRootElement();
@@ -9,13 +10,22 @@ export function keyHandler() {
 
     const cInput = document.querySelector('input');
 
+    if (e.key === 'Backspace') {
+      cInput.value = cInput.value.slice(0, -1);
+    }
+
+    if (e.key === 'Escape') {
+      cInput.value = '';
+    }
+
     if (keyButton) {
       if (e.key !== 'Enter') {
-        cInput.value += e.key;
+        const newValue = cInput.value + e.key;
+        cInput.value = inputHandler(newValue);
       }
 
       if (e.key === 'Enter') {
-        cInput.value = calculate(cInput.value)
+        cInput.value = calculate(cInput.value);
       }
 
       keyButton.classList.add('button_pressed');

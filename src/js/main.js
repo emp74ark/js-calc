@@ -9,17 +9,13 @@ export function main() {
 
   const cInput = document.createElement('input');
 
-  cInput.autofocus = true;
-
   cInput.addEventListener('input', (e) => {
     e.target.value = inputHandler(e.target.value);
-  })
+  });
 
   cInput.addEventListener('keydown', (e) => {
-    if (e.key !== 'Backspace') {
-      e.preventDefault();
-    }
-  })
+    e.preventDefault();
+  });
 
   fragment.appendChild(cInput);
 
@@ -35,7 +31,7 @@ export function main() {
       title: '+/-',
       type: 'action',
       fn: () => {
-         cInput.value = toOpposite(cInput.value)
+        cInput.value = toOpposite(cInput.value);
       },
     },
     {
@@ -140,7 +136,7 @@ export function main() {
       title: '0',
       type: 'null',
       fn: () => {
-        const newValue = cInput.value + '0'
+        const newValue = cInput.value + '0';
         cInput.value = inputHandler(newValue);
       },
     },
@@ -148,7 +144,7 @@ export function main() {
       title: ',',
       type: 'delimiter',
       fn: () => {
-        const newValue = cInput.value + '.'
+        const newValue = cInput.value + '.';
         cInput.value = inputHandler(newValue);
       },
     },
@@ -156,7 +152,7 @@ export function main() {
       title: '=',
       type: 'calculate',
       fn: () => {
-        cInput.value = calculate(cInput.value)
+        cInput.value = calculate(cInput.value);
       },
     },
   ];

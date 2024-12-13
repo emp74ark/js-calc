@@ -3,9 +3,11 @@ import {
   messageLevel,
   messages,
   notAllowedSymbols,
-  repeatedDelimiter, repeatedOperator,
+  repeatedDelimiter,
+  repeatedOperator,
   repeatedZeros,
-  trailingDelimiter, trailingOperator,
+  trailingDelimiter,
+  trailingOperator,
   trailingZero,
 } from './constants';
 import { notify } from './notifications';
