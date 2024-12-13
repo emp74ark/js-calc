@@ -4,6 +4,8 @@ export const repeatedZeros = /^0{2,}/;
 export const repeatedDelimiter = /[.,](?=.*[.,])/g;
 export const trailingZero = /(^0)(\d+)/;
 export const trailingDelimiter = /^[.,]+/;
+export const repeatedOperator = /[+\-=*%/]{2,}/g;
+export const trailingOperator = /^[+\-=*%/]/;
 
 export const messages = {
   defaultError: 'Something went wrong',
@@ -11,6 +13,7 @@ export const messages = {
   invalidSymbol: 'This symbol is not allowed',
   misplacedZeros: 'Some zeros are misplaced',
   misplacedDelimiter: 'Misplaced delimiter',
+  misplacedOperator: 'Misplaced math operators',
 };
 
 export const messageLevel = {

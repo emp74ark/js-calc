@@ -3,9 +3,9 @@ import {
   messageLevel,
   messages,
   notAllowedSymbols,
-  repeatedDelimiter,
+  repeatedDelimiter, repeatedOperator,
   repeatedZeros,
-  trailingDelimiter,
+  trailingDelimiter, trailingOperator,
   trailingZero,
 } from './constants';
 import { notify } from './notifications';
@@ -21,6 +21,16 @@ export function inputHandler(inputValue) {
       notify(messages.misplacedDelimiter, messageLevel.info);
       const matches = inputValue.match(trailingDelimiter);
       return inputValue.replace(matches[0], '');
+    }
+
+    if (repeatedOperator.test(inputValue)) {
+      notify(messages.misplacedOperator, messageLevel.info);
+      return inputValue.replace(repeatedOperator, inputValue.slice(-1));
+    }
+
+    if (trailingOperator.test(inputValue)) {
+      notify(messages.misplacedOperator, messageLevel.info);
+      return inputValue.replace(trailingOperator, '');
     }
 
     if (inputValue.includes(',')) {
