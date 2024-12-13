@@ -26,7 +26,7 @@ export function calculate(values) {
 export function toOpposite(values) {
   try {
     const elements = values.split(/[+\-*%//]/);
-    if (values.length !== elements.length) {
+    if (values.length !== elements.length && values.length > 1) {
       return `-(${ values })`;
     }
     return values * -1;

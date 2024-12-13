@@ -4,6 +4,7 @@ import {
   messages,
   notAllowedSymbols,
   repeatedZeros,
+  trailingZero,
 } from './constants';
 import { notify } from './notifications';
 
@@ -16,8 +17,14 @@ export function inputHandler(e) {
   }
 
   if (repeatedZeros.test(inputValue)) {
-    notify(messages.repeatedZeros, messageLevel.info);
+    notify(messages.misplacedZeros, messageLevel.info);
     e.target.value = inputValue.replace(repeatedZeros, '0');
+  }
+
+  if (trailingZero.test(inputValue)) {
+    notify(messages.misplacedZeros, messageLevel.info);
+    const matches = inputValue.match(trailingZero);
+    e.target.value = inputValue.replace(matches[0], matches[2]);
   }
 
   if (!allowedSymbols.test(inputValue)) {
