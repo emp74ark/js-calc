@@ -9,6 +9,8 @@ export function main() {
 
   const cInput = document.createElement('input');
 
+  cInput.autofocus = true;
+
   cInput.addEventListener('input', (e) => inputHandler(e))
 
   fragment.appendChild(cInput);
