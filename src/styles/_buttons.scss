@@ -1,5 +1,11 @@
 @use "colors" as c;
 
+@mixin button-pressed {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+  box-shadow: 0.1rem 0.1rem 0.1rem c.$bg-shadow;
+}
+
 @mixin app-button {
   width: 3.2rem;
   height: 3.2rem;
@@ -12,9 +18,7 @@
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;
-    box-shadow: 0.1rem 0.1rem 0.1rem c.$bg-shadow;
+    @include button-pressed;
   }
 }
 
@@ -40,4 +44,8 @@
 .button__null {
   width: 6.6rem;
   grid-column: 1/3;
+}
+
+.button_pressed {
+  @include button-pressed;
 }
