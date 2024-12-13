@@ -11,7 +11,9 @@ export function main() {
 
   cInput.autofocus = true;
 
-  cInput.addEventListener('input', (e) => inputHandler(e))
+  cInput.addEventListener('input', (e) => {
+    e.target.value = inputHandler(e.target.value);
+  })
 
   fragment.appendChild(cInput);
 
@@ -132,14 +134,16 @@ export function main() {
       title: '0',
       type: 'null',
       fn: () => {
-        cInput.value += '0';
+        const newValue = cInput.value + '0'
+        cInput.value = inputHandler(newValue);
       },
     },
     {
       title: ',',
       type: 'delimiter',
       fn: () => {
-        cInput.value += ',';
+        const newValue = cInput.value + '.'
+        cInput.value = inputHandler(newValue);
       },
     },
     {
