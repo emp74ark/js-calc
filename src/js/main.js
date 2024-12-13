@@ -15,6 +15,12 @@ export function main() {
     e.target.value = inputHandler(e.target.value);
   })
 
+  cInput.addEventListener('keydown', (e) => {
+    if (e.key !== 'Backspace') {
+      e.preventDefault();
+    }
+  })
+
   fragment.appendChild(cInput);
 
   const cButtons = [
@@ -68,7 +74,7 @@ export function main() {
       },
     },
     {
-      title: 'x',
+      title: '*',
       type: 'action',
       fn: () => {
         cInput.value += '*';
