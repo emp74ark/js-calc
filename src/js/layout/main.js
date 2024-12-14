@@ -54,21 +54,24 @@ export function main() {
       title: '7',
       type: 'number',
       fn: () => {
-        cInput.value += '7';
+        const newValue = cInput.value + '7';
+        cInput.value = inputHandler(newValue);
       },
     },
     {
       title: '8',
       type: 'number',
       fn: () => {
-        cInput.value += '8';
+        const newValue = cInput.value + '8';
+        cInput.value = inputHandler(newValue);
       },
     },
     {
       title: '9',
       type: 'number',
       fn: () => {
-        cInput.value += '9';
+        const newValue = cInput.value + '9';
+        cInput.value = inputHandler(newValue);
       },
     },
     {
@@ -83,21 +86,24 @@ export function main() {
       title: '4',
       type: 'number',
       fn: () => {
-        cInput.value += '4';
+        const newValue = cInput.value + '4';
+        cInput.value = inputHandler(newValue);
       },
     },
     {
       title: '5',
       type: 'number',
       fn: () => {
-        cInput.value += '5';
+        const newValue = cInput.value + '5';
+        cInput.value = inputHandler(newValue);
       },
     },
     {
       title: '6',
       type: 'number',
       fn: () => {
-        cInput.value += '6';
+        const newValue = cInput.value + '6';
+        cInput.value = inputHandler(newValue);
       },
     },
     {
@@ -112,21 +118,24 @@ export function main() {
       title: '1',
       type: 'number',
       fn: () => {
-        cInput.value += '1';
+        const newValue = cInput.value + '1';
+        cInput.value = inputHandler(newValue);
       },
     },
     {
       title: '2',
       type: 'number',
       fn: () => {
-        cInput.value += '2';
+        const newValue = cInput.value + '2';
+        cInput.value = inputHandler(newValue);
       },
     },
     {
       title: '3',
       type: 'number',
       fn: () => {
-        cInput.value += '3';
+        const newValue = cInput.value + '3';
+        cInput.value = inputHandler(newValue);
       },
     },
     {
