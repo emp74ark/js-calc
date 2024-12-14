@@ -38,14 +38,16 @@ export function main() {
       title: '%',
       type: 'action',
       fn: () => {
-        cInput.value += '%';
+        const newValue = cInput.value + '%';
+        cInput.value = inputHandler(newValue);
       },
     },
     {
       title: '/',
       type: 'action',
       fn: () => {
-        cInput.value += '/';
+        const newValue = cInput.value + '/';
+        cInput.value = inputHandler(newValue);
       },
     },
     {
@@ -73,7 +75,8 @@ export function main() {
       title: '*',
       type: 'action',
       fn: () => {
-        cInput.value += '*';
+        const newValue = cInput.value + '*';
+        cInput.value = inputHandler(newValue);
       },
     },
     {
@@ -101,7 +104,8 @@ export function main() {
       title: '-',
       type: 'action',
       fn: () => {
-        cInput.value += '-';
+        const newValue = cInput.value + '-';
+        cInput.value = inputHandler(newValue);
       },
     },
     {
@@ -129,7 +133,8 @@ export function main() {
       title: '+',
       type: 'action',
       fn: () => {
-        cInput.value += '+';
+        const newValue = cInput.value + '+';
+        cInput.value = inputHandler(newValue);
       },
     },
     {
