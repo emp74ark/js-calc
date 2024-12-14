@@ -1,10 +1,15 @@
 import { notify } from './notifications';
-import { mathOperators, messageLevel, messages } from './constants';
+import {
+  mathOperators,
+  messageLevel,
+  messages,
+  percentValue,
+} from './constants';
 
 export function calculate(values) {
   try {
     if (/\d%/.test(values)) {
-      values = values.replaceAll(/\d%/g, (match) => {
+      values = values.replaceAll(percentValue, (match) => {
         return (parseInt(match.replace('%', '')) / 100);
       });
     }
