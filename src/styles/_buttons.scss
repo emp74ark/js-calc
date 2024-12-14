@@ -35,9 +35,15 @@
 }
 
 .button__action,
+.button__opposite,
 .button__calculate {
   @include app-button;
   background: c.$bg-tertiary;
+}
+
+.button__clear {
+  @include app-button;
+  background: c.$bg-danger;
 }
 
 .buttons-container {
