@@ -30,5 +30,8 @@ npm run serve
 ## App description
 Folder structure:
 - **assets** contains only favicon
-- **js** contains all js code
+- **js:** 
+  - **layout** contains app layout js files
+  - **utils** contains helper functions
+  - **constants.js** contains constants used in the app.
 - **styles** SCSS files with styles
