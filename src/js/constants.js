@@ -6,6 +6,7 @@ export const trailingZero = /(^0)(\d+)/;
 export const trailingDelimiter = /^[.,]+/;
 export const repeatedOperator = /[+\-=*%/]{2,}/g;
 export const trailingOperator = /^[+=*%/]/;
+export const mathOperators = /[+\-*%//]/g;
 
 export const messages = {
   defaultError: 'Something went wrong',

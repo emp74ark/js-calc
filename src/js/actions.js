@@ -1,5 +1,5 @@
 import { notify } from './notifications';
-import { messageLevel, messages } from './constants';
+import { mathOperators, messageLevel, messages } from './constants';
 
 export function calculate(values) {
   try {
@@ -25,11 +25,18 @@ export function calculate(values) {
 
 export function toOpposite(values) {
   try {
-    const elements = values.split(/[+\-*%//]/);
-    if (values.length !== elements.length && values.length > 1) {
-      return `-(${ values })`;
+    const numbers = values.replaceAll(mathOperators, '');
+
+    const verifyLastSymbol = mathOperators.test(values.slice(-1))
+      ? values.slice(0, -1)
+      : values;
+
+    if (verifyLastSymbol.length !== numbers.length && verifyLastSymbol.length >
+      1) {
+      return `-(${ verifyLastSymbol })`;
     }
-    return values * -1;
+
+    return verifyLastSymbol * -1;
   } catch (error) {
     notify(messages.defaultError, messageLevel.error);
     return 0;
