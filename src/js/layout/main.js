@@ -1,6 +1,6 @@
 import { cButton } from './button';
-import { calculate, toOpposite } from './actions';
-import { inputHandler } from './input.handler';
+import { calculate, toOpposite } from '../utils/actions';
+import { inputHandler } from '../utils/input.handler';
 
 export function main() {
   const mainElement = document.createElement('main');

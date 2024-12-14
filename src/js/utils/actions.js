@@ -1,10 +1,10 @@
-import { notify } from './notifications';
+import { notify } from '../layout/notifications';
 import {
   mathOperators,
   messageLevel,
   messages,
   percentValue,
-} from './constants';
+} from '../constants';
 
 export function calculate(values) {
   try {

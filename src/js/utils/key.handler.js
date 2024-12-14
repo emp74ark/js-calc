@@ -1,4 +1,4 @@
-import { getRootElement } from './root';
+import { getRootElement } from '../layout/root';
 import { calculate } from './actions';
 import { inputHandler } from './input.handler';
 

@@ -1,9 +1,9 @@
 import './styles/index.scss';
-import { header } from './js/header';
-import { createRootTree } from './js/root';
-import { main } from './js/main';
-import footer from './js/footer';
-import { keyHandler } from './js/key.handler';
+import { header } from './js/layout/header';
+import { createRootTree } from './js/layout/root';
+import { main } from './js/layout/main';
+import footer from './js/layout/footer';
+import { keyHandler } from './js/utils/key.handler';
 
 createRootTree([
   header(),

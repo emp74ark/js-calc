@@ -9,8 +9,8 @@ import {
   trailingDelimiter,
   trailingOperator,
   trailingZero,
-} from './constants';
-import { notify } from './notifications';
+} from '../constants';
+import { notify } from '../layout/notifications';
 
 export function inputHandler(inputValue) {
   try {
