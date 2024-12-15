@@ -36,7 +36,7 @@ export function main() {
     { title: '3', type: 'number' },
     { title: '+', type: 'action' },
     { title: '0', type: 'null' },
-    { title: ',', type: 'delimiter' },
+    { title: '.', type: 'delimiter' },
     { title: '=', type: 'calculate' },
   ];
 

@@ -5,8 +5,9 @@ import { inputHandler } from './input.handler';
 export function keyHandler() {
   const root = getRootElement();
   root.addEventListener('keydown', (e) => {
+    const key = e.key === ',' ? '.' : e.key;
 
-    const keyButton = document.getElementById(e.key);
+    const keyButton = document.getElementById(key);
 
     const cInput = document.querySelector('input');
 

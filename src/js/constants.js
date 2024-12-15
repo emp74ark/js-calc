@@ -1,7 +1,7 @@
 export const allowedSymbols = /^[0-9+\-=*%/,.]*$/;
 export const notAllowedSymbols = /[^0-9+\-=*%/]+/g;
 export const repeatedZeros = /^0{2,}/;
-export const repeatedDelimiter = /[.,](?=.*[.,])/g;
+export const repeatedDelimiter = /[.,]{2,}|[.,]\d+[.,]/;
 export const trailingZero = /(^0)(\d+)/;
 export const trailingDelimiter = /^[.,]+/;
 export const repeatedOperator = /[+\-=*%/]{2,}/g;

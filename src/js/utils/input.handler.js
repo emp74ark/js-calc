@@ -14,15 +14,19 @@ import { notify } from '../layout/notifications';
 
 export function inputHandler(inputValue) {
   try {
+    if (trailingDelimiter.test(inputValue)) {
+      notify(messages.misplacedDelimiter, messageLevel.info);
+      const matches = inputValue.match(trailingDelimiter);
+      return inputValue.replace(matches[0], '');
+    }
+
     if (repeatedDelimiter.test(inputValue)) {
       notify(messages.misplacedDelimiter, messageLevel.info);
       return inputValue.replace(repeatedDelimiter, '');
     }
 
-    if (trailingDelimiter.test(inputValue)) {
-      notify(messages.misplacedDelimiter, messageLevel.info);
-      const matches = inputValue.match(trailingDelimiter);
-      return inputValue.replace(matches[0], '');
+    if (inputValue.includes(',')) {
+      return inputValue.replace(',', '.');
     }
 
     if (repeatedOperator.test(inputValue)) {
@@ -33,10 +37,6 @@ export function inputHandler(inputValue) {
     if (trailingOperator.test(inputValue)) {
       notify(messages.misplacedOperator, messageLevel.info);
       return inputValue.replace(trailingOperator, '');
-    }
-
-    if (inputValue.includes(',')) {
-      return inputValue.replace(',', '.');
     }
 
     if (repeatedZeros.test(inputValue)) {
