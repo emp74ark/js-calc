@@ -8,7 +8,7 @@ import {
 
 export function calculate(values) {
   try {
-    if (/\d%/.test(values)) {
+    if (percentValue.test(values)) {
       values = values.replaceAll(percentValue, (match) => {
         return (parseInt(match.replace('%', '')) / 100);
       });
